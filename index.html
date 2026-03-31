@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>十九岁诗歌博物馆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+    <canvas id="particle-canvas"></canvas>
+
+    <audio id="bgm" loop>
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="center">
+        <h1>十九岁诗歌博物馆</h1>
+        <p>这是一个关于漂流、接力、十九岁与被看见的展览</p>
+        <a href="hall.html" class="btn">进入展厅</a>
+        <br><br>
+        <button class="btn" onclick="toggleMusic()">播放 / 暂停音乐</button>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            const music = document.getElementById("bgm");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

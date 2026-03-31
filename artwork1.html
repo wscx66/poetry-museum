@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品一</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="particle-art-page">
+
+    <div class="blur-bg"></div>
+    <div class="overlay"></div>
+
+    <a href="hall.html" class="back-btn">← 返回展厅</a>
+
+    <div class="art-title-wrap">
+        <h1 class="art-title">十九岁诗歌博物馆</h1>
+        <p class="art-subtitle">一张图正在从空气中缓缓显现</p>
+    </div>
+
+    <canvas id="artCanvas"></canvas>
+
+    <div class="final-image-wrap">
+        <img src="images/album-grid.jpg" class="final-image" alt="诗歌图">
+
+        <!-- 九宫格热区 -->
+        <div class="hotspot-grid" id="hotspotGrid">
+            <button class="hotspot" data-index="0" aria-label="区域1"></button>
+            <button class="hotspot" data-index="1" aria-label="区域2"></button>
+            <button class="hotspot" data-index="2" aria-label="区域3"></button>
+            <button class="hotspot" data-index="3" aria-label="区域4"></button>
+            <button class="hotspot" data-index="4" aria-label="区域5"></button>
+            <button class="hotspot" data-index="5" aria-label="区域6"></button>
+            <button class="hotspot" data-index="6" aria-label="区域7"></button>
+            <button class="hotspot" data-index="7" aria-label="区域8"></button>
+            <button class="hotspot" data-index="8" aria-label="区域9"></button>
+        </div>
+    </div>
+
+    <!-- 放大图片弹层 -->
+<div class="image-overlay hidden" id="imageOverlay">
+    <div class="image-viewer">
+        <button class="close-image" id="closeImageBtn" aria-label="关闭">×</button>
+        <div class="zoomed-piece-wrap">
+            <div class="zoomed-piece" id="zoomedPiece"></div>
+        </div>
+    </div>
+</div>
+
+<div class="star-cursor" id="starCursor"></div>
+<div class="star-trail-container" id="starTrailContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
